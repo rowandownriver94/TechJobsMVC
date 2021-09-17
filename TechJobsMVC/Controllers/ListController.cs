@@ -47,12 +47,12 @@ namespace TechJobsMVC.Controllers
             if (column.ToLower().Equals("all"))
             {
                 jobs = JobData.FindAll();
-                ViewBag.title = "All Jobs";
+                ViewBag.title = "All Jobs" + " (" + jobs.Count + " results)";
             }
             else
             {
                 jobs = JobData.FindByColumnAndValue(column, value);
-                ViewBag.title = "Jobs with " + ColumnChoices[column] + ": " + value;
+                ViewBag.title = "Jobs with " + ColumnChoices[column] + ": " + value + " (" + jobs.Count + " results)";
             }
 
             ViewBag.jobs = jobs;
