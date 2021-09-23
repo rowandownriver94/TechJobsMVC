@@ -34,7 +34,7 @@ namespace TechJobsMVC.Controllers
                 ViewBag.title = $"Results for All Jobs ({jobResults.Count} found)";
                 
             }
-            else
+            else 
             {
                 jobResults = JobData.FindByColumnAndValue(searchType, searchTerm);
                 ViewBag.title = $"Results for '{searchTerm}' ({jobResults.Count} found)";
